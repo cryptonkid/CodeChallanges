@@ -1,0 +1,8 @@
+package com.chapter4.trees;
+
+public class Node {
+	Node left;
+	Node right;
+	int data;
+	
+}

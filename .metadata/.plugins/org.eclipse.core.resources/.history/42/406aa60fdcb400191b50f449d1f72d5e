@@ -1,0 +1,15 @@
+package com.chapter4.trees;
+
+/**
+ * 
+ * @author cryptonkid
+ *
+ */
+public class GetHeight {
+	public static int findHeight(Node root) {
+		if(root == null)
+			return 0;
+		int height = ((findHeight(root.left)+1)>(findHeight(root.right)+1)?(findHeight(root.left)+1):(findHeight(root.right)+1));
+		return height;
+	}
+}

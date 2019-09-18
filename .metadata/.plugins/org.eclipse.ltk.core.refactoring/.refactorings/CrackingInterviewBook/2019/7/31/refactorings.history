@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.prerequisites&apos; to &apos;com.chapter0.prerequisites&apos;&#x0D;&#x0A;- Original project: &apos;CrackingInterviewBook&apos;&#x0D;&#x0A;- Original element: &apos;CrackingInterviewBook/src/com.prerequisites&apos;&#x0D;&#x0A;- Renamed element: &apos;CrackingInterviewBook/src/com.chapter0.prerequisites&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.prerequisites&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.prerequisites" name="com.chapter0.prerequisites" qualified="false" references="true" stamp="1564590075852" textual="false" version="1.0"/>
+</session>
