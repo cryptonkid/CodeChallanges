@@ -1,6 +1,6 @@
 package com.chapter4.trees;
-import java.util.ArrayList;
-import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 public class IdenticalTrees{
 	public static void main(String args[]) {
@@ -28,7 +28,7 @@ class RecursiveIdenticalTreeSolution {
 class IterativeIdenticalTreeSolution{	
 	public static boolean isIdentical(Node root1,Node root2) {
 		
-		Stack<Pair> listOfNodes = new Stack();
+		Deque<Pair> listOfNodes = new ArrayDeque<>();
 		/*if(root1 == null & root2 != null) { //In this way both conditions are evaluated and not short circuited.
 			return false;
 		}
@@ -49,18 +49,32 @@ class IterativeIdenticalTreeSolution{
 		if(root2 == null ) {
 			return false;
 		}
+		
 		listOfNodes.add(new Pair(root1,root2));
-		while(!listOfNodes.empty()) {
+		while(!listOfNodes.isEmpty()) {
 			Pair p = listOfNodes.pop();
-				if(p.left.data != p.right.data)
+			Node right = p.right;
+			Node left = p.left;
+				if(right.data != left.data)
 				{
 					return false;
 				}
-				
+				else {
+					if(right.left != null || p.right.left != null ) {
+					
+						listOfNodes.push(new Pair(right.left,left.left));
+						listOfNodes.push(new Pair(right.right,left.right));
+						
+					}
+				}
 		}
+		return true;
 		
 	}
-	class Pair{
+	/*
+	 * Create pair class as static or declare it in another file.
+	 */
+	static class Pair{
 		Node left;
 		Node right;
 		
