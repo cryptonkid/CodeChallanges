@@ -52,20 +52,26 @@ class IterativeIdenticalTreeSolution{
 		
 		listOfNodes.add(new Pair(root1,root2));
 		while(!listOfNodes.isEmpty()) {
-			Pair p = listOfNodes.pop();
-			Node right = p.right;
-			Node left = p.left;
-				if(right.data != left.data)
+			Pair p = listOfNodes.pop();//removeFirst
+			Node rightNode = p.right;
+			Node leftNode = p.left;
+				if(rightNode.data != leftNode.data)
 				{
 					return false;
 				}
+			    
+				//Add the value to the stack based for the next nodes
+				if(rightNode.left != null & leftNode.left != null ) {
+					listOfNodes.push(new Pair(rightNode.left,leftNode.left));
+				}
 				else {
-					if(right.left != null || p.right.left != null ) {
-					
-						listOfNodes.push(new Pair(right.left,left.left));
-						listOfNodes.push(new Pair(right.right,left.right));
-						
-					}
+					return false;
+				}
+				
+				if(rightNode.right != null & leftNode.right != null) {
+					listOfNodes.push(new Pair(rightNode.right,leftNode.left));
+				}else {
+					return false;
 				}
 		}
 		return true;
