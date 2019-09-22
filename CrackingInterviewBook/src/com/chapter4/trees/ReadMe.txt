@@ -2,13 +2,13 @@ ReadMe.txt
 =================
 In this post, we have list out commonly asked interview questions that uses binary tree -
 most of the solutions are on : http://www.techiedelight.com/
-1) Check if two given binary trees are identical or not | Iterative & Recursive
-2) Calculate height of a binary tree | Iterative & Recursive
-3) Delete given Binary Tree | Iterative & Recursive
+1) Check if two given binary trees are identical or not | Iterative & Recursive | solved
+2) Calculate height of a binary tree | Iterative & Recursive | solved.
+3) Delete given Binary Tree | Iterative & Recursive | solved.
 4) Inorder Tree Traversal | Iterative & Recursive
 5) Preorder Tree Traversal | Iterative & Recursive
 6) Postorder Tree Traversal | Iterative & Recursive
-7) Level Order Traversal of Binary Tree
+7) Level Order Traversal of Binary Tree | note (2) : this is used in iterative approach for height | solved.
 Spiral Order Traversal of Binary Tree
 Reverse Level Order Traversal of Binary Tree
 Print all nodes of a given binary tree in specific order
