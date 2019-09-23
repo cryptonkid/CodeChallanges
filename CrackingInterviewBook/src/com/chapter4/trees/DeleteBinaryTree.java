@@ -29,16 +29,26 @@ public class DeleteBinaryTree {
 
 	public static void deleteBTIterative(Node root) {
 		Stack<Node> stack = new Stack<Node>();
+		
 		if(root != null) {
 			stack.add(root);
 		}
-		while(stack.isEmpty()) {
-			if(stack.peek() != null) {
-					Node tempNode = stack.pop();
-					if(tempNode.left != null)
-						stack.add(tempNode.left);
-					if(tempNode.right != null)
-						stack.add(tempNode.right);
+		while(true) {
+			Node top = stack.peek();
+			//insert the leaf nodes till you encounter the leaf node
+			if(top.left != null) {
+				stack.add(top.left);
+			}
+			else {
+				Node temp = stack.pop();
+				temp = null;
+			}
+			if(top.right != null) {
+				stack.add(top.right);
+			}
+			else {
+				Node temp = stack.pop();
+				temp = null;
 			}
 		}
 	}
