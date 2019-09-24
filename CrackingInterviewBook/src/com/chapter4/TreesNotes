@@ -1,0 +1,6 @@
+Important point to understand is :
+1) Any tree can be traversed in the following ways
+	i)  Depth wise order : (Inorder,PreOrder,PostOrder)
+	ii) Breath wise order : ( level Order)
+2) Inorder to get the desired output 
+    ** one needs to use "stack/queue" in combination with the above orders.
