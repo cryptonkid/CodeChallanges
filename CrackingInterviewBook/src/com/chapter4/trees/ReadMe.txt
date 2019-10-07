@@ -1,19 +1,29 @@
+Sample Tree
+--------------
+     1
+    / \
+   /   \
+  2     3
+ / \   / \
+4   5 6   7
+    
+    
 ReadMe.txt
 =================
 In this post, we have list out commonly asked interview questions that uses binary tree -
-most of the solutions are on : http://www.techiedelight.com/
+most of the solutions are on : http://www.techiedelight.com/ and also use following chinese website.https://massivealgorithms.blogspot.com/
 1) Check if two given binary trees are identical or not | Iterative & Recursive | solved
 2) Calculate height of a binary tree | Iterative & Recursive | solved.
-3) Delete given Binary Tree | Iterative & Recursive | solved.
-4) Inorder Tree Traversal | Iterative & Recursive
-5) Preorder Tree Traversal | Iterative & Recursive
-6) Postorder Tree Traversal | Iterative & Recursive
+3) Delete given Binary Tree | Iterative & Recursive | solved .
+4) Inorder Tree Traversal | Iterative & Recursive  | solved
+5) Preorder Tree Traversal | Iterative & Recursive | solved
+6) Postorder Tree Traversal | Iterative & Recursive | solved
 7) Level Order Traversal of Binary Tree | note (2) : this is used in iterative approach for height | solved.
-Spiral Order Traversal of Binary Tree
-Reverse Level Order Traversal of Binary Tree
+8) Spiral Order Traversal of Binary Tree | solved
+9) Reverse Level Order Traversal of Binary Tree | solved
 Print all nodes of a given binary tree in specific order
-Print Left View of a Binary Tree
-Print Right View of a Binary Tree
+Print Left View of a Binary Tree | *** VERY IMPORTANT Solutions***
+Print Right View of a Binary Tree | 
 Print Bottom View of Binary Tree
 Print Top View of Binary Tree
 Find next node in same level for given node in a binary tree
@@ -33,7 +43,7 @@ Print all paths from root to leaf nodes in given binary tree
 Find ancestors of given node in a Binary Tree
 Find the distance between given pairs of nodes in a binary tree
 Find Vertical Sum in a given Binary Tree
-Print nodes in vertical order of a given Binary Tree (Vertical Traversal)
+Print nodes in vertical order of a given Binary Tree (Vertical Traversal) | solved : https://massivealgorithms.blogspot.com/2019/02/leetcode-987-vertical-order-traversal.html
 Find the diagonal sum of given binary tree
 Print Diagonal Traversal of Binary Tree
 Print corner nodes of every level in binary tree
