@@ -9,9 +9,13 @@ import java.util.Deque;
  *  followed by nodes of level 2 right to left,
  *   followed by nodes of level 3 from left to right and so on.
  *  In other words, odd levels should be printed from left to right and..
+ *  
+ *  Space & time Complexity :0(n)
+ *  
  * @author cryptonkid
  *
  */
+
 public class SpiralTreeTraversal {
 	public void Spiral(Node root) {
 		int level = 0;
