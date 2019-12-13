@@ -10,6 +10,7 @@ public class LevelOrderTraversal {
 	 * time and space complexity : 0(n)
 	 * @param root
 	 */
+	
 	public static void levelOrderTraversal(Node root) {
 		Deque<Node> queue = new ArrayDeque<Node>();
 		if (root != null)

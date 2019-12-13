@@ -21,7 +21,7 @@ most of the solutions are on : http://www.techiedelight.com/ and also use follow
 7) Level Order Traversal of Binary Tree | note (2) : this is used in iterative approach for height | solved.
 8) Spiral Order Traversal of Binary Tree | solved
 9) Reverse Level Order Traversal of Binary Tree | solved
-Print all nodes of a given binary tree in specific order
+Print all nodes of a given binary tree in specific order | solved : https://www.techiedelight.com/print-nodes-binary-tree-specific-order/ |
 Print Left View of a Binary Tree | *** VERY IMPORTANT Solutions***
 Print Right View of a Binary Tree | 
 Print Bottom View of Binary Tree
