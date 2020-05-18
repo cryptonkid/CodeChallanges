@@ -84,31 +84,27 @@ public class MinDistanceNumber {
 		long min = Long.MAX_VALUE;
 		int prev = -1;
 		for(int i = 0;i<arr.length;i++) {
-			if(arr[i] == x ) {
-				int curr = i;
-				if(prev == -1)
-					prev = curr;
-				else if(arr[prev] == x)
-					prev = curr;
-				else {
-					min = Math.min(min,curr - prev);
-					prev = curr;
-				}
-			}
-			if(arr[i] == y) {
-				int curr = i;
-				if(prev == -1)
-					prev = curr;
-				else if(arr[prev] == y)
-					prev = curr;
-				else {
-					min = Math.min(min,curr - prev);
-					prev = curr;
-				}
+			if(arr[i] == x  || arr[i] == y) {
+				if (arr[i] == x || arr[i] == y)  
+	            { 
+	                // If the current element matches with any of the two then 
+	                // check if current element and prev element are different 
+	                // Also check if this value is smaller than minimum distance  
+	                // so far 
+	                if (arr[prev] != arr[i] && (i - prev) < min)  
+	                { 
+	                	min = i - prev; 
+	                    prev = i; 
+	                }  
+	                else
+	                    prev = i; 
+	            }
 			}
 		}
 		if(min == Long.MAX_VALUE)
 			min = -1;
 		return min;   
     }
+	
+	
 }
