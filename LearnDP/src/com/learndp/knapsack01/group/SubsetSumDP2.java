@@ -1,4 +1,8 @@
 package com.learndp.knapsack01.group;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 /**
  * https://www.geeksforgeeks.org/subset-sum-problem-dp-25/
  * 
@@ -21,8 +25,12 @@ package com.learndp.knapsack01.group;
 public class SubsetSumDP2 {
 
 	public static void main(String[] args) {
+		//BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		//int testCases = Integer.parseInt(br.readLine());
+		System.out.println(findPartition(new int[] {1,2,3},3));
+		//System.out.println(findPartition(new int[] {478,757,314,471,729,100,459,618}, 8));
 		
-
+		
 	}
 	/**
 	 * Similarity to knapsack01 : 
@@ -62,21 +70,55 @@ public class SubsetSumDP2 {
 	 */
 	public boolean topDownSubsetSum(int arr[],int sum,int n) {
 		boolean dp[][] = new boolean[n+1][sum+1];
-		for(int i = 0;i<n;i++) {
-			for(int j=0;j<sum;j++) {
+		for(int i = 0;i<=n;i++) {
+			for(int j=0;j<=sum;j++) {
 				if(i == 0)
 					dp[i][j] = false;
 				if(j == 0)
 					dp[i][j] = true;
-				
-				if(arr[i] > sum)
+				else if(arr[i] > j)//j not sum 
 					dp[i][j] = false;
 				else
-					dp[i][j] = dp[i][j-arr[i]] || dp[i][j];
+					dp[i][j] = dp[i-1][j-arr[i-1]] || dp[i-1][j];
 			}
 		}
 		return dp[n+1][sum+1];
 	}
-	
+	/**
+	 * https://www.geeksforgeeks.org/subset-sum-problem-dp-25/ 
+	 * Here final sum is not given .
+	 * @param a
+	 * @param n
+	 * @return
+	 */
+	public static boolean findPartition(int[] a, int n) {
+        int sum = 0;
+        for(int i =0 ;i<n;i++)
+         sum = sum + a[i];
+        if(sum%2 != 0)
+            return false;
+        else{
+            //(sum/2) is the target : similar to weight/KanpsackCapacity .
+            sum = sum/2;
+            boolean dp[][] = new boolean[n+1][sum+1];
+            for(int i =0;i<n+1;i++){
+                for(int j=0;j<sum+1;j++){
+                    if(i == 0 || j == 0 ) {
+                    	if(i == 0)
+                            dp[i][j] = false;
+                           if(j == 0)
+                            dp[i][j] = true;
+                    }
+                    else {
+                    	if(a[i-1] > j)
+                            dp[i][j] = false;
+                        else
+                            dp[i][j] = dp[i-1][j-a[i-1]] || dp[i-1][j];
+                    }   
+                }
+            }
+            return dp[n][sum];
+        }
+	}
 	
 }
