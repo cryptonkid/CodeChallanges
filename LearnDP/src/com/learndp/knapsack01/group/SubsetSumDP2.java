@@ -65,11 +65,16 @@ Testcase 1: There exists two subsets such that {1, 5, 5} and {11}.
 public class SubsetSumDP2 {
 
 	public static void main(String[] args) throws IOException{
-//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-//		int testCases = Integer.parseInt(br.readLine());
-//		while(testCases-- > 0) {
-//			
-//		}
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int testCases = Integer.parseInt(br.readLine());
+		while(testCases-- > 0) {
+			int n = Integer.parseInt(br.readLine());
+			String str[] = br.readLine().split("\\s+");
+			for(int i =0;i<str.length;i++) {
+				
+			}
+			
+		}
 		
 		//System.out.println(findEqualSumPartitionSetExists(new int[] {1,2,3},3));
 		//System.out.println(findEqualSumPartitionSetExists(new int[] {478,757,314,471,729,100,459,618}, 8));
@@ -135,8 +140,10 @@ public class SubsetSumDP2 {
 				}
 			}
 		}
+		
 		for (boolean[] row : dp) 
             System.out.println(Arrays.toString(row));
+		
 		return dp[n][sum];
 	}
 	
